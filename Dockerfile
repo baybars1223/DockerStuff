@@ -22,10 +22,10 @@ ENV MOODLE_URL http://127.0.0.1
 ADD ./foreground.sh /etc/apache2/foreground.sh
 
 RUN apt-get update && \
-apt-get install software-properties-common \
-add-apt-repository ppa:ondrej/php \
-apt-get update \
-apt-transport-https \
+apt-get install software-properties-common && \
+add-apt-repository ppa:ondrej/php && \
+apt-get update && \
+apt-transport-https && \
 apt-get install vim apache2 mysql-client mysql-server php5.6 libapache2-mod-php5.6 graphviz aspell php5.6-pspell php5.6-curl php5.6-gd php5.6-intl php5.6-mysql php5.6-xml php5.6-xmlrpc php5.6-ldap php5.6-zip git nano
 
 #cron
