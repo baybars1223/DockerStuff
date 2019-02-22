@@ -22,7 +22,7 @@ ENV MOODLE_URL http://127.0.0.1
 ADD ./foreground.sh /etc/apache2/foreground.sh
 
 RUN apt-get update && \
-apt-get install software-properties-common && \
+apt-get -y install software-properties-common && \
 add-apt-repository ppa:ondrej/php && \
 apt-get update && \
 apt-transport-https && \
